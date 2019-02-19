@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>My tasks</h1>
+
+<% @tasks.each do |task| %>
+<div class="task">
+  <h4><input type="checkbox" name="complete" value="complete"> <%=link_to task.title, task_path(task), :class => "my_link" %></h4>
+  <p><%= link_to "Update Task", edit_path(task), :class => "my_link" %></p>
+  <p><%= link_to "Delete", delete_path(task),
+    method: :delete,
+    data: { confirm: "Are you sure?" },
+    :class => "my_link"
+  %></p>
+</div>
+<% end %>
+
+
+
+  <%= link_to new_path do %>
+    <button class="btn btn-primary"> Create New Task </button>
+  <% end %>
+</div>
+
+
+
+

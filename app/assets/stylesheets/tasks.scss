@@ -1,0 +1,33 @@
+// Place all the styles related to the Tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.my_link {
+  text-decoration: none;
+  color: #a5aeff;
+
+}
+.my_link:hover {
+  color: #c8e4fe;
+  text-decoration: none;
+}
+
+.container h1{
+  color: #6b76ff;
+}
+
+.task{
+  border: solid rgb(240, 240, 240) .5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+p{
+  color: #503bff;
+}
+
+label{
+  color: #503bff;
+}
