@@ -20,11 +20,13 @@ class TasksController < ApplicationController
   end
 
   def edit
+
+
   end
 
   def update
-    @task.update(task_params)
-    redirect_to task_path(@task)
+    @task.update(completed: true)
+    redirect_to tasks_path
   end
 
   def delete
@@ -35,7 +37,9 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:title, :details)
+
+    params.require(:task).permit(:title, :details, :completed)
+
   end
 
   def set_task

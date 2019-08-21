@@ -3,7 +3,17 @@
 
 <% @tasks.each do |task| %>
 <div class="task">
-  <h4><input type="checkbox" name="complete" value="complete"> <%=link_to task.title, task_path(task), :class => "my_link" %></h4>
+  <h4>
+
+    <%= link_to task_path(task), method: :patch do %>
+      <input type="checkbox" name="completed" value="true">
+      <% end %>
+    <%=link_to task.title, task_path(task), :class => "my_link" %></h4>
+    <% if task.completed %>
+
+    <% end %>
+
+
   <p><%= link_to "Update Task", edit_path(task), :class => "my_link" %></p>
   <p><%= link_to "Delete", delete_path(task),
     method: :delete,
